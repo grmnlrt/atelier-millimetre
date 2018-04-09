@@ -1,0 +1,15 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// To use a font file (.woff) uncomment following lines
+@font-face {
+  font-family: "Korolev";
+  src: font-url('../../fonts/korolev/korolev_medium.otf');
+  // src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  //      font-url('FontFile.woff') format('woff'),
+  //      font-url('FontFile.ttf') format('truetype')
+}
+
+// Define fonts for body and headers
+$base-font: "Roboto", "sans-serif";
+$headers-font: "Korolev", "Helvetica", "sans-serif";

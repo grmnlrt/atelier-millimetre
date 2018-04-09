@@ -1,7 +1,7 @@
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
-@import "config/global";
+@import "config/bootstrap_variables";
 
 // External libraries
 // @import "font-awesome";
@@ -10,3 +10,39 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+
+.tmp-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  img {
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: #212529;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 3px;
+      background: #d0da8e;
+      margin-top: -2px;
+      transition: width .4s ease;
+    }
+
+    &:hover {
+      color: #212529;
+      text-decoration: none;
+
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
