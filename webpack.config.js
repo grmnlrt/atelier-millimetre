@@ -2,18 +2,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-// const cssLoaders = [
-//   {
-//     loader: "css-loader",
-//     options: {
-//       modules: true,
-//       minimize: true
-//     }
-//   },
-//   {
-//     loader: "sass-loader"
-//   }
-// ]
 module.exports = {
   context: __dirname + "/source",
   entry: {
@@ -30,8 +18,18 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.(css|scss)$/,
+        use: [
+          {
+            loader: "style-loader" // creates style nodes from JS strings
+          },
+          {
+            loader: "css-loader" // translates CSS into CommonJS
+          },
+          {
+            loader: "sass-loader" // compiles Sass to CSS
+          }
+        ]
       }
     ],//end rules
   },
