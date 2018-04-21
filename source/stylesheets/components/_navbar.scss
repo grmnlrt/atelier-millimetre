@@ -1,0 +1,55 @@
+#navbar {
+  margin: 20px 0 40px;
+
+  .navbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 740px) {
+      display: none;
+    }
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  #logo {
+    margin: 10px 30px;
+
+    img {
+      width: 80px;
+    }
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .mobile-content {
+    display: none;
+    @media screen and (max-width: 740px) {
+      display: block;
+
+      #logo {
+        margin: 0;
+        img {
+          width: 60px;
+        }
+      }
+    }
+  }
+
+}

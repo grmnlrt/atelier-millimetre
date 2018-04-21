@@ -43,3 +43,6 @@ activate :deploy do |deploy|
   deploy.build_before = true
   deploy.deploy_method = :git
 end
+
+# routes
+page "/les_cadres.html"

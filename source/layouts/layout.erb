@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Atelier Millimètre : Spécialiste de petites choses" %></title>
     <%= stylesheet_link_tag "site" %>
   </head>
   <body>
+    <%= partial "components/navbar" %>
     <%= yield %>
     <%= javascript_include_tag "site" %>
   </body>
