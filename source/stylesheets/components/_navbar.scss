@@ -1,0 +1,111 @@
+#navbar {
+  margin: 20px 0 40px;
+
+  .desktop-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 740px) {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  #logo {
+    margin: 10px 30px;
+
+    img {
+      width: 80px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .mobile-content {
+    display: none;
+    position: relative;
+    @media screen and (max-width: 740px) {
+      display: block;
+    }
+
+    #logo {
+      margin: 0;
+      margin-left: 18px;
+      img {
+        width: 60px;
+      }
+    }
+
+    .menu-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 18px;
+
+      & > div {
+        background: $black;
+        height: 4px;
+        margin-bottom: 6px;
+        width: 30px;
+        transition: all .3s ease;
+      }
+
+      & > div:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active .two {
+        opacity: 0;
+      }
+
+      &.active .one {
+        transform: rotate(45deg) translate(7px, 7px);
+        background: $black;
+      }
+
+      &.active .three {
+        transform: rotate(-45deg) translate(7px, -7px);
+        background: $black;
+      }
+    }
+
+    .menu-toggle:hover {
+      cursor: pointer;
+    }
+
+    ul {
+      height: 0;
+      overflow: hidden;
+      transition: .3s all ease;
+    }
+
+    ul.active {
+      height: 240px;
+    }
+
+    li {
+      padding: 8px;
+    }
+  }
+
+}
