@@ -1,6 +1,6 @@
 <div id="navbar">
   <div class="container">
-    <div class="navbar-content">
+    <div class="desktop-content">
       <div class="links">
         <ul>
           <li>
@@ -51,10 +51,42 @@
           <%= image_tag 'mm_logo.png' %>
         <% end %>
       </div>
-      <ul id="mobile-menu">
-        <li><a class="scroll" href="#features">Features</a></li>
-        <li><a class="scroll" href="#usage">Usage Instructions</a></li>
-        <li><a class="scroll" href="#examples">Examples</a></li>
+      <div class="menu-toggle">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <ul>
+        <li class="text-center">
+          <% link_to "#" do %>
+            Les cadres
+          <% end %>
+        </li>
+        <li class="text-center">
+          <% link_to "#" do %>
+            Les carnets
+          <% end %>
+        </li>
+        <li class="text-center">
+          <% link_to "#" do %>
+            Les éditions
+          <% end %>
+        </li>
+        <li class="text-center">
+          <% link_to "#" do %>
+            L'atelier
+          <% end %>
+        </li>
+        <li class="text-center">
+          <% link_to "#" do %>
+            Points de ventes
+          <% end %>
+        </li>
+        <li class="text-center">
+          <% link_to "#" do %>
+            Contact
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
