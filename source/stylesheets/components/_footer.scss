@@ -25,12 +25,12 @@
 .social-media {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 }
 .social-media-icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   img {
     height: 32px;
     padding: 0 5px;
