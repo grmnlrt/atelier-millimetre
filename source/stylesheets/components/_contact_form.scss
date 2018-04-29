@@ -38,3 +38,8 @@ form {
   }
 }
 
+.contact-section img {
+  @media (max-width: $breakpoint-xs) {
+    display: none;
+  }
+}
