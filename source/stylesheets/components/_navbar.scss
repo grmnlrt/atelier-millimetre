@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: $breakpoint-sm) {
       display: none;
     }
 
@@ -44,13 +44,12 @@
   .mobile-content {
     display: none;
     position: relative;
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: $breakpoint-sm) {
       display: block;
     }
 
     #logo {
-      margin: 0;
-      margin-left: 18px;
+      margin: 0 0 0 18px;
       img {
         width: 60px;
       }
