@@ -9,4 +9,4 @@ function mobileMenu() {
   }
 }
 
-export { mobileMenu }
+export { mobileMenu };
