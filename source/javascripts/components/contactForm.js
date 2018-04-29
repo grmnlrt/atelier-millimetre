@@ -9,8 +9,8 @@ function contactForm() {
     overlay.classList.add(`active`);
     contactBox.classList.add('active');
 
-    const closeModal = contactBox.querySelector(`.button-close`);
-    closeModal.addEventListener('click', () => {
+    const buttonClose = contactBox.querySelector(`.button-close`);
+    buttonClose.addEventListener('click', () => {
       contactBox.classList.remove(`active`);
       overlay.classList.remove(`active`);
     })
