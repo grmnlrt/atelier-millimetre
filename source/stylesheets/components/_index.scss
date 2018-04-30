@@ -25,22 +25,26 @@
 }
 
 .dotted-underline {
-  display: flex;
-  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21px, 1fr));
 }
 
 .instagram {
-  width: 300px;
+  width: 100%;
   height: 280px;
   object-fit: cover;
 }
 
 .eshop {
-  width: 600px;
+  width: 100%;
   height: 280px;
   object-fit: cover;
 }
 
 .home-content {
   margin-bottom: 110px;
+}
+
+.shops {
+  margin-top: 60px;
 }
