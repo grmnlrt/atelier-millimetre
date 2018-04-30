@@ -11,8 +11,11 @@ a {
 
 .dot {
   background: $green;
-  height: 4px;
-  width: 4px;
+  height: 5px;
+  width: 5px;
   border-radius: 50%;
-  margin: 0 10px;
+  margin: 0 8px;
+  &.first {
+    margin-left: 0;
+  }
 }

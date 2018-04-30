@@ -3,3 +3,44 @@
 @import "navbar";
 @import "contact_form";
 @import "footer";
+
+.banner {
+  background-image: url("../../images/notebook.jpg");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 65px;
+}
+
+.banner-title {
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  h1 {
+    font-family: $base-font;
+    padding: 0 40px;
+  }
+}
+
+.dotted-underline {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.instagram {
+  width: 300px;
+  height: 280px;
+  object-fit: cover;
+}
+
+.eshop {
+  width: 600px;
+  height: 280px;
+  object-fit: cover;
+}
+
+.home-content {
+  margin-bottom: 110px;
+}
