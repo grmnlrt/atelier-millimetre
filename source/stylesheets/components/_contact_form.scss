@@ -1,0 +1,46 @@
+#contact-box {
+  height: 500px;
+  position: relative;
+  border-top: 5px solid $green;
+  background-color: white;
+  margin: 0 auto;
+  display: none;
+  z-index: 11;
+}
+#contact-box.active {
+  display: block;
+}
+
+.button-close {
+  font-size: 40px;
+  font-weight: 300;
+  color: rgba(51, 51, 51, 0.1);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.button-close:hover {
+  color: $black;
+}
+
+form {
+  color: $dark-grey;
+  font-size: 16px;
+  .form-control {
+    background-color: $grey;
+    border: none;
+  }
+  .btn-submit {
+    background: $green;
+    color: $black;
+    font-weight: 500;
+  }
+}
+
+.contact-section img {
+  @media (max-width: $breakpoint-xs) {
+    display: none;
+  }
+}
