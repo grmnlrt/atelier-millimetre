@@ -1,11 +1,12 @@
 #navbar {
-  margin: 20px 0 40px;
+  margin: 0px 0 40px;
+  padding-top: 20px;
 
   .desktop-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: $breakpoint-sm) {
       display: none;
     }
 
@@ -19,7 +20,7 @@
     width: 100%;
   }
 
-  #logo {
+  .logo {
     margin: 10px 30px;
 
     img {
@@ -44,13 +45,12 @@
   .mobile-content {
     display: none;
     position: relative;
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: $breakpoint-sm) {
       display: block;
     }
 
-    #logo {
-      margin: 0;
-      margin-left: 18px;
+    .logo {
+      margin: 0 0 0 18px;
       img {
         width: 60px;
       }

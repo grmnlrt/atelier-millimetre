@@ -9,6 +9,10 @@ $font-family-sans-serif:  $base-font;
 // $font-size-base:          $base-size;
 // $line-height-base:        $base-height;
 $headings-font-family:    $headers-font;
+$font-size-h1: 32px;
+$font-size-h2: 24px;
+$font-size-h3: 20px;
+$font-size-h4: 16px;
 
 // Semantic color scheme
 $brand-primary:   $green;
@@ -27,3 +31,8 @@ $border-radius-small: 2px;
 $link-color:            $black;
 $link-hover-color:      $green;
 $link-hover-decoration: none;
+
+// Breakpoints
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
