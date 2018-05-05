@@ -16,3 +16,7 @@ a {
   border-radius: 50%;
   margin: 0 10px;
 }
+
+#page-content {
+  min-height: calc(100vh - 431px);
+}
