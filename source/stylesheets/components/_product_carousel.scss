@@ -1,0 +1,48 @@
+.product-carousel {
+  position: relative;
+  margin-bottom: 56px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 95%;
+    width: 5%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, white 40%, transparent);
+  }
+}
+
+.product-container {
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+  padding-bottom: 16px;
+
+  &:after {
+    content: '';
+    display: block;
+    border: 16px transparent solid;
+  }
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 0;
+    background: $light-grey;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $green;
+  }
+}
+
+.product-picture {
+  height: 300px;
+  margin-right: 16px;
+  cursor: pointer;
+
+  img {
+    height: 100%;
+  }
+}
