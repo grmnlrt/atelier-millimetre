@@ -6,6 +6,10 @@
   & > div {
     margin-bottom: 8px;
   }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    display: none;
+  }
 }
 
 .social-link {
