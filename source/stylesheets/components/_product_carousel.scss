@@ -1,4 +1,4 @@
-.product-carousel {
+#product-carousel {
   position: relative;
   margin-bottom: 56px;
 
@@ -44,5 +44,11 @@
 
   img {
     height: 100%;
+  }
+}
+
+#product-details {
+  .description, .materials {
+    margin-bottom: 40px;
   }
 }

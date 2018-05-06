@@ -1,0 +1,17 @@
+ul.mm-list {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "•";
+      margin-right: 8px;
+      color: $green;
+      font-size: 1.5em;
+      line-height: 0;
+    }
+  }
+}
