@@ -71,9 +71,17 @@ function triggerClickOnProduct() {
         hideProductDetails(product);
       });
       showProductDetails(product);
+      window.location.hash = `#${product.dataset.productId}`;
+      document.querySelector('.product-container').scrollLeft = product.offsetLeft;
     });
   });
 }
 
+function fetchUrlId() {
+  if (window.location.hash !== "") {
+    document.querySelector(`[data-product-id="${window.location.hash.substr(1)}`).click();
+  }
+}
 
-export { populateCarousel, triggerClickOnProduct };
+
+export { populateCarousel, triggerClickOnProduct, fetchUrlId };
