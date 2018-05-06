@@ -61,6 +61,9 @@
     height: 500px;
     overflow: hidden;
     transition: all .5s ease;
+    @media screen and (max-width: $breakpoint-sm) {
+      height: 700px;
+    }
 
     &.product-hidden {
       height: 0;
