@@ -10,7 +10,7 @@ contactForm();
 if (document.querySelector("#product-carousel")) {
   getData('cadre').then(results => {
     populateCarousel(results).then(() => {
-      console.log('toto');
+      triggerClickOnProduct();
     });
   });
 }

@@ -42,6 +42,10 @@
   margin-right: 16px;
   cursor: pointer;
 
+  &.unselected {
+    opacity: .2;
+  }
+
   img {
     height: 100%;
   }

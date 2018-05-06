@@ -6,7 +6,7 @@ function createMaterialsList(materials) {
 }
 
 function populateCarousel(products) {
-  return new Promise(() => {
+  return new Promise((resolve) => {
     const container = document.querySelector(".product-container");
     const detailsContainer = document.querySelector('#product-details');
 
@@ -38,14 +38,34 @@ function populateCarousel(products) {
         </div>
       `;
 
-      container.insertAdjacentHTML('beforeend', productPicture)
-      detailsContainer.insertAdjacentHTML('beforeend', productDetails)
+      container.insertAdjacentHTML('beforeend', productPicture);
+      resolve(detailsContainer.insertAdjacentHTML('beforeend', productDetails));
     })
   });
 }
 
+function showProductDetails(product) {
+  const details = document.querySelector(`[data-product-target="${product.dataset.productId}"]`);
+  product.classList.remove('unselected');
+  details.classList.remove('hidden');
+}
+
+function hideProductDetails(product) {
+  const details = document.querySelector(`[data-product-target="${product.dataset.productId}"]`);
+  product.classList.add('unselected');
+  details.classList.add('hidden');
+}
+
 function triggerClickOnProduct() {
   const products = document.querySelectorAll('.product-picture');
+  products.forEach((product) => {
+    product.addEventListener('click', () => {
+      products.forEach((product) => {
+        hideProductDetails(product);
+      });
+      showProductDetails(product);
+    });
+  });
 }
 
 
