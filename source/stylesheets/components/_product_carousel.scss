@@ -55,4 +55,14 @@
   .description, .materials {
     margin-bottom: 40px;
   }
+
+  .details {
+    height: 500px;
+    overflow: hidden;
+    transition: all .5s ease;
+
+    &.product-hidden {
+      height: 0;
+    }
+  }
 }

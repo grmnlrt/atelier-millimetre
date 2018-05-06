@@ -1,8 +1,15 @@
 function createMaterialsList(materials) {
-  const list = materials.map(material => {
+  const list = materials.map((material) => {
     return `<li>${material.mat}</li>`
   });
   return list.join('');
+}
+
+function createDescriptionParagraphs(description) {
+  const paragraphs = description.map((desc) => {
+    return `<p>${desc.text}</p>`;
+  });
+  return paragraphs.join('');
 }
 
 function populateCarousel(products) {
@@ -19,10 +26,10 @@ function populateCarousel(products) {
       `;
 
       const productDetails = `
-        <div class="row hidden" data-product-target="${product.id}">
+        <div class="row details product-hidden" data-product-target="${product.id}">
           <div class="col-xs-12 col-sm-7">
             <h2>${product.data.title[0].text}</h2>
-            <p class="description">${product.data.description[0].text}</p>
+            <div class="description">${createDescriptionParagraphs(product.data.description)}</div>
             <p>La place des mots est à chaque fois différente.</p>
             <p>L’écriture manuscrite est celle de la créatrice.</p>
             <p>La broderie est réalisée à la main.</p>
@@ -47,13 +54,13 @@ function populateCarousel(products) {
 function showProductDetails(product) {
   const details = document.querySelector(`[data-product-target="${product.dataset.productId}"]`);
   product.classList.remove('unselected');
-  details.classList.remove('hidden');
+  details.classList.remove('product-hidden');
 }
 
 function hideProductDetails(product) {
   const details = document.querySelector(`[data-product-target="${product.dataset.productId}"]`);
   product.classList.add('unselected');
-  details.classList.add('hidden');
+  details.classList.add('product-hidden');
 }
 
 function triggerClickOnProduct() {
