@@ -1,0 +1,72 @@
+#product-carousel {
+  position: relative;
+  margin-bottom: 56px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 95%;
+    width: 5%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, white 40%, transparent);
+  }
+}
+
+.product-container {
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 16px;
+
+  &:after {
+    content: '';
+    display: block;
+    border: 16px transparent solid;
+  }
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 0;
+    background: $light-grey;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $green;
+  }
+}
+
+.product-picture {
+  height: 300px;
+  margin-right: 16px;
+  cursor: pointer;
+
+  &.unselected {
+    opacity: .2;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+#product-details {
+  .description, .materials {
+    margin-bottom: 40px;
+  }
+
+  .details {
+    height: 500px;
+    overflow: hidden;
+    transition: all .5s ease;
+    @media screen and (max-width: $breakpoint-sm) {
+      height: 700px;
+    }
+
+    &.product-hidden {
+      height: 0;
+    }
+  }
+}

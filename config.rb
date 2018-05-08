@@ -46,3 +46,4 @@ end
 
 # routes
 page "/les_cadres.html"
+page "/les_carnets.html"
