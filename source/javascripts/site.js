@@ -8,7 +8,7 @@ mobileMenu();
 contactForm();
 
 if (document.querySelector("#product-carousel")) {
-  getData('cadre').then(results => {
+  getData().then(results => {
     populateCarousel(results).then(() => {
       triggerClickOnProduct();
       fetchUrlId();
