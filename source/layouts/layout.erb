@@ -9,10 +9,13 @@
     <%= stylesheet_link_tag "site" %>
   </head>
   <body>
-    <%= partial "components/overlay" %>
     <%= partial "components/navbar" %>
-    <%= partial "components/contact_form" %>
-    <%= yield %>
+    <div id="page-content">
+      <%= partial "components/overlay" %>
+      <%= partial "components/contact_form" %>
+      <%= yield %>
+    </div>
+    <%= partial "components/social_links" %>
     <%= partial "components/footer" %>
     <%= javascript_include_tag "site" %>
   </body>

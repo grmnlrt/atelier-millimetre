@@ -1,5 +1,6 @@
 #footer {
   border-top: 1px solid $green;
+  margin-top: 80px;
 }
 .footer-frame {
   height: 200px;
@@ -23,17 +24,14 @@
 
 // Social media
 .social-media {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 40px;
 }
 .social-media-icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    height: 32px;
-    padding: 0 5px;
+  .social-link {
+    margin: 0 4px;
   }
 }
 

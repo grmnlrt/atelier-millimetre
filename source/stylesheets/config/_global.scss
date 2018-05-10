@@ -8,3 +8,14 @@ a {
   font-weight: 400;
   transition: color .1s ease;
 }
+
+// Default style for paragraph
+p {
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0 0 8px;
+}
+
+#page-content {
+  min-height: calc(100vh - 511px);
+}
