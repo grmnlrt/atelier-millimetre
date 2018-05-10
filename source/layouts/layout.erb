@@ -11,10 +11,10 @@
   <body>
     <%= partial "components/navbar" %>
     <div id="page-content">
+      <%= partial "components/overlay" %>
+      <%= partial "components/contact_form" %>
       <%= yield %>
     </div>
-    <%= partial "components/overlay" %>
-    <%= partial "components/contact_form" %>
     <%= partial "components/social_links" %>
     <%= partial "components/footer" %>
     <%= javascript_include_tag "site" %>
