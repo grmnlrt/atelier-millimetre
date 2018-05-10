@@ -10,16 +10,11 @@ title: Atelier Millimètre : Spécialiste de petites choses
           <div class="banner-title">
             <h1>MORCEAUX CHOISIS carnets singuliers</h1>
           </div>
-          <div class="trigger-photo">
-            <div data-pic="1" data-image="notebook.jpg" class="dot-lg picture1 active"></div>
-            <div data-pic="2" data-image="frames.jpg" class="dot-lg picture2"></div>
-            <div data-pic="3" data-image="millimetre.jpg" class="dot-lg picture3"></div>
-            <div data-pic="4" data-image="atelier.jpg" class="dot-lg picture4"></div>
-          </div>
+          <%= partial 'components/homepage_carousel' %>
         </div>
       </div>
       <div class="col-xs-offset-1 col-xs-10">
-        <div class="home-content">
+        <div class="home-content" style="margin-bottom:110px;">
           <h1 style="margin-bottom:2px;"><strong>MILLIMÈTRE. <br class="hidden-md hidden-lg"> spécialiste de petites choses</strong></h1>
           <div class="dotted-underline hidden-xs">
             <% 21.times do %>
@@ -33,37 +28,12 @@ title: Atelier Millimètre : Spécialiste de petites choses
             <div class="row">
               <div class="col-xs-12 col-md-4">
                 <div class="card-body">
-                  <h2>instagram</h2>
-                  <div class="card_picture" style="background-image: url(<%= image_path 'millimetre.jpg' %>)">
-                    <% link_to "https://www.instagram.com/atelier.millimetre/", target: :_blank do %>
-                      <div class="card-hover">
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <h4>Retrouvez toutes les photos de l’atelier sur notre compte Instagram.</h4>
-                          </div>
-                        </div>
-                      </div>
-                    <% end %>
-                  </div>
+                  <%= partial 'components/card_instagram' %>
                 </div>
               </div>
               <div class="col-xs-12 col-md-8">
                 <div class="card-body">
-                  <h2>e-shop</h2>
-                  <div class="card_picture" style="background-image: url(<%= image_path 'pano_frames.jpg' %>)">
-                    <% link_to "https://www.etsy.com/fr/shop/AtelierMillimetre", target: :_blank do %>
-                      <div class="card-hover">
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-8">
-                            <h4>Tous les objets sont fabriqués à la main dans l'atelier MILLIMÈTRE.</h4>
-                          </div>
-                          <div class="col-xs-12 col-sm-4">
-                            <button class="btn btn-secondary">Visiter l’E-Shop</button>
-                          </div>
-                        </div>
-                      </div>
-                    <% end %>
-                  </div>
+                  <%= partial 'components/card_eshop' %>
                 </div>
               </div>
             </div>

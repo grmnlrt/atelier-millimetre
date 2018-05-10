@@ -1,0 +1,18 @@
+.banner {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 65px;
+}
+
+.banner-title {
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  h1 {
+    font-family: $base-font;
+    padding: 0 40px;
+  }
+}

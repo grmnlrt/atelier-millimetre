@@ -8,27 +8,3 @@ a {
   font-weight: 400;
   transition: color .1s ease;
 }
-
-.dot {
-  background: $green;
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  &.first {
-    margin-left: 0;
-  }
-}
-
-.dot-lg {
-  background-color: rgba(255, 255, 255, 0.4);
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  margin: 0 2px;
-  &:hover {
-    background-color: $green;
-  }
-  &.active {
-    background-color: $green;
-  }
-}
