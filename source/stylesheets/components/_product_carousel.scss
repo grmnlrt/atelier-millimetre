@@ -1,6 +1,7 @@
 #product-carousel {
   position: relative;
   margin-bottom: 56px;
+  min-height: 324px;
 
   &:after {
     content: "";
