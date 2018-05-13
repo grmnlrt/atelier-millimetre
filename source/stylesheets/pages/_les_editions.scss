@@ -7,4 +7,14 @@ img.image-editions {
   justify-content: center;
   flex-direction: column;
   height: 400px;
+  @media (max-width: $breakpoint-lg) {
+    height: 330px;
+  }
+  @media (max-width: $breakpoint-md) {
+    height: 260px;
+  }
+  @media (max-width: $breakpoint-sm) {
+    height: inherit;
+    margin: 30px 0;
+  }
 }
