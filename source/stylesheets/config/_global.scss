@@ -16,6 +16,12 @@ p {
   margin: 0 0 8px;
 }
 
+// page content min size
 #page-content {
   min-height: calc(100vh - 511px);
+}
+
+// margin-bottom
+.margin-bottom-40 {
+  margin-bottom: 40px;
 }
