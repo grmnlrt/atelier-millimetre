@@ -25,11 +25,14 @@ function populateCarousel(products) {
         </div>
       `;
 
+      const productLink = `<a class="btn btn-primary" href="${product.data.shop_link.url}" target="_blank">Acheter en ligne</a>`;
+
       const productDetails = `
         <div class="row details product-hidden" data-product-target="${product.id}">
           <div class="col-xs-12 col-sm-7">
             <h2>${product.data.title[0].text}</h2>
             <div class="description">${createDescriptionParagraphs(product.data.description)}</div>
+            ${product.data.shop_link.url? productLink : ""}
           </div>
           <div class="col-xs-12 col-sm-4 col-sm-offset-1">
             <h3>Matériaux</h3>
@@ -62,7 +65,6 @@ function triggerClickOnProduct() {
   const products = document.querySelectorAll('.product-picture');
   products.forEach((product) => {
     product.addEventListener('click', () => {
-      console.log('toto')
       products.forEach((product) => {
         hideProductDetails(product);
       });
