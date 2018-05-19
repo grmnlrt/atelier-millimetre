@@ -29,3 +29,22 @@ input, textarea {
     border-bottom: 3px $green solid !important;
   }
 }
+
+// Default style for btn
+.btn {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.btn-primary {
+  border: none;
+}
+
+.btn-secondary {
+  border: 2px solid #D0DA8E;
+  background-color: transparent;
+  color: $black;
+  &:hover {
+    background-color: $light-grey;
+  }
+}
