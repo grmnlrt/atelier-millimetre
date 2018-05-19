@@ -1,5 +1,11 @@
+#modal {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 20%;
+}
+
 #contact-box {
-  height: 500px;
   position: relative;
   border-top: 5px solid $green;
   background-color: white;
@@ -9,6 +15,11 @@
 }
 #contact-box.active {
   display: block;
+}
+
+#contact-form {
+  display: inline-block;
+  width: 100%;
 }
 
 .button-close {
