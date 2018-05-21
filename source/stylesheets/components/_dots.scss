@@ -11,6 +11,10 @@
   &.first {
     margin-left: 0;
   }
+  &.empty {
+    background: transparent;
+    border: 1px solid $green;
+  }
 }
 
 .dot-lg {
