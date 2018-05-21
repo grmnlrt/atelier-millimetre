@@ -8,14 +8,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .5s ease opacity;
 
   &.mask {
-    opacity: 0;
-
-    .dot {
-      display: none;
-    }
+    display: none;
   }
 
   .dot {

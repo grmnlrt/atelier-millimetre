@@ -16,6 +16,35 @@ p {
   margin: 0 0 8px;
 }
 
+// Default style page height
 #page-content {
   min-height: calc(100vh - 511px);
+}
+
+// Default style for input
+input, textarea {
+  box-shadow: none !important;
+  transition: border-width .2s ease !important;
+  &:focus {
+    border-bottom: 3px $green solid !important;
+  }
+}
+
+// Default style for btn
+.btn {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.btn-primary {
+  border: none;
+}
+
+.btn-secondary {
+  border: 2px solid #D0DA8E;
+  background-color: transparent;
+  color: $black;
+  &:hover {
+    background-color: $light-grey;
+  }
 }
