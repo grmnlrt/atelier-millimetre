@@ -1,8 +1,14 @@
 #atelier-pictures {
+  position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
   height: 400px;
+
+  & > div {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
 
   img {
     height: 400px
