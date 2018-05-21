@@ -10,11 +10,7 @@
   align-items: center;
 
   &.mask {
-    z-index: -1;
-
-    .dot {
-      display: none;
-    }
+    display: none;
   }
 
   .dot {
