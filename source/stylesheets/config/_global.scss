@@ -44,6 +44,12 @@ input, textarea {
   border: 2px solid #D0DA8E;
   background-color: transparent;
   color: $black;
+  &.white {
+    color: white;
+    &:hover {
+      background-color: inherit;
+    }
+  }
   &:hover {
     background-color: $light-grey;
   }
