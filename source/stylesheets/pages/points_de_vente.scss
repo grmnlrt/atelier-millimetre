@@ -1,6 +1,12 @@
-.container-green {
-  background-color: $green;
-
+.container-vente {
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  &.green {
+    background-color: $green;
+  }
 }
 
 .uppercase {
