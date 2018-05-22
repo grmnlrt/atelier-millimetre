@@ -15,4 +15,18 @@
 
 .image-vente {
   width: 100%;
+  @media screen and (min-width: $breakpoint-sm) {
+    &.top {
+        transform: translateX(-20%) scale(1.15);
+      }
+    &.low {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.pictures-vente-xs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
