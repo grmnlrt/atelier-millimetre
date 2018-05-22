@@ -24,3 +24,10 @@
     }
   }
 }
+
+a.no-green {
+  display: initial !important;
+  &:hover {
+  color: inherit;
+  }
+}
