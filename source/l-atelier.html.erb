@@ -8,26 +8,26 @@
     <div class="col-xs-12 col-md-4">
       <div id="atelier-pictures">
         <div class="about">
-          <%= image_tag "millimetre.jpg" %>
+          <%= image_tag "millimetre.jpg", data: { image_id: 1 } %>
         </div>
         <div class="fabrication">
-          <%= image_tag "atelier.jpg" %>
+          <%= image_tag "atelier.jpg", data: { image_id: 2 } %>
         </div>
         <div class="collaborateurs">
-          <%= image_tag "millimetre.jpg" %>
+          <%= image_tag "millimetre.jpg", data: { image_id: 3 } %>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-md-1">
       <div id="dots">
-        <div class="dot"></div>
-        <div class="dot empty"></div>
-        <div class="dot empty"></div>
+        <div class="dot" data-dot-id="1"></div>
+        <div class="dot empty" data-dot-id="2"></div>
+        <div class="dot empty" data-dot-id="3"></div>
       </div>
     </div>
     <div class="col-xs-12 col-md-7">
       <div id="atelier-content">
-        <div class="about">
+        <div class="about" data-content-id="1">
           <h2>à propos</h2>
           <p>L’atelier millimètre est spécialisé dans les petites choses.</p>
           <p>
@@ -37,7 +37,7 @@
             Relieuse de formation, Maël de l’atelier millimètre, mêle à son imagination un savoir-faire pointu. Ici, on s’amuse, on s’emporte et on s’applique pour faire de chacun de nos objets une création authentique.
           </p>
         </div>
-        <div class="fabrication" style="display: none;">
+        <div class="fabrication" style="display: none;" data-content-id="2">
           <h2>fabrication</h2>
           <p>
             Tous nos objets sont des pièces uniques, fabriquées à la main, dans notre atelier parisien.
@@ -46,7 +46,7 @@
             On utilise essentiellement du carton, du papier, du tissu et du cuir. La majorité des matériaux utilisés sont des rejets de l’industrie ou issus de récupération et de recyclage.
           </p>
         </div>
-        <div class="collaborateurs" style="display: none;">
+        <div class="collaborateurs" style="display: none;" data-content-id="3">
           <h2>collaborateurs:</h2>
           <ul class="mm-list">
             <li>Eulalie Thiou : graphiste</li>
