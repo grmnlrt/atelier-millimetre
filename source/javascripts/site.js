@@ -4,12 +4,12 @@ import { changeBannerPicture } from './components/change_banner_picture';
 import { populateCarousel, triggerClickOnProduct, fetchUrlId } from './components/product_carousel';
 import { getData } from './services/prismic_api';
 import { hideLoader } from './components/loader';
-import clickOnDot from './components/page_atelier';
+import carouselAtelier from './components/page_atelier';
 
 mobileMenu();
 contactForm();
 changeBannerPicture();
-clickOnDot();
+carouselAtelier(2);
 
 
 if (document.querySelector("#product-carousel")) {
