@@ -48,3 +48,12 @@ input, textarea {
     background-color: $light-grey;
   }
 }
+
+.btn-eshop {
+  border: 2px solid #D0DA8E;
+  background-color: transparent;
+  color: white;
+  &:hover {
+    color: white;
+  }
+}

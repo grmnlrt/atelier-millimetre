@@ -1,0 +1,33 @@
+.container-vente {
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  &.green {
+    background-color: $green;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.image-vente {
+  width: 100%;
+  @media screen and (min-width: $breakpoint-sm) {
+    &.top {
+        transform: translateX(-20%) scale(1.15);
+      }
+    &.low {
+      transform: scale(1.15);
+    }
+  }
+}
+
+a.no-green {
+  display: initial !important;
+  &:hover {
+  color: inherit;
+  }
+}
