@@ -4,6 +4,10 @@
   height: 400px;
   margin-bottom: 40px;
 
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 0;
+  }
+
   & > div {
     width: 100%;
     position: absolute;
@@ -31,6 +35,11 @@
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: $breakpoint-md) {
+    height: inherit;
+    flex-direction: inherit;
+  }
+
   .dot {
     margin: 16px;
     height: 10px;
@@ -42,6 +51,19 @@
 #atelier-content {
   height: 400px;
   position: relative;
+
+  @media (max-width: $breakpoint-md) {
+    height: 200px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    height: 300px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    height: 400px;
+  }
 
   & > div {
     position: absolute;
