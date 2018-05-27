@@ -11,10 +11,10 @@
           <%= image_tag "millimetre.jpg", data: { image_id: 1 } %>
         </div>
         <div class="fabrication">
-          <%= image_tag "atelier.jpg", data: { image_id: 2 } %>
+          <%= image_tag "atelier.jpg", class: "mask", data: { image_id: 2 } %>
         </div>
         <div class="collaborateurs">
-          <%= image_tag "millimetre.jpg", data: { image_id: 3 } %>
+          <%= image_tag "frames.jpg", class: "mask", data: { image_id: 3 } %>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
             Relieuse de formation, Maël de l’atelier millimètre, mêle à son imagination un savoir-faire pointu. Ici, on s’amuse, on s’emporte et on s’applique pour faire de chacun de nos objets une création authentique.
           </p>
         </div>
-        <div class="fabrication hidden" data-text-id="2">
+        <div class="fabrication mask" data-text-id="2">
           <h2>fabrication</h2>
           <p>
             Tous nos objets sont des pièces uniques, fabriquées à la main, dans notre atelier parisien.
@@ -46,7 +46,7 @@
             On utilise essentiellement du carton, du papier, du tissu et du cuir. La majorité des matériaux utilisés sont des rejets de l’industrie ou issus de récupération et de recyclage.
           </p>
         </div>
-        <div class="collaborateurs hidden" data-text-id="3">
+        <div class="collaborateurs mask" data-text-id="3">
           <h2>collaborateurs:</h2>
           <ul class="mm-list">
             <li>Eulalie Thiou : graphiste</li>
@@ -59,6 +59,12 @@
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="text-center">Nous sommes toujours curieux de découvrir de nouvelles choses, qu’elles soient petites, grandes, maladroites ou sauvages … </p>
+      <p class="text-center">N'hésitez pas à <a href="#" class="contact-trigger">nous écrire !</a></p>
     </div>
   </div>
 </div>

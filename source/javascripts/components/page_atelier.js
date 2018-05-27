@@ -9,17 +9,17 @@ function updateDot(dotId) {
 function updateImage(imageId) {
   const images = document.querySelectorAll('#atelier-pictures img');
   images.forEach((image) => {
-    image.classList.add('hidden');
+    image.classList.add('mask');
   })
-  document.querySelector(`[data-image-id="${imageId}"]`).classList.remove('hidden');
+  document.querySelector(`[data-image-id="${imageId}"]`).classList.remove('mask');
 }
 
 function updateText(textId) {
   const texts = document.querySelectorAll('#atelier-content > div');
   texts.forEach((text) => {
-    text.classList.add('hidden');
+    text.classList.add('mask');
   })
-  document.querySelector(`[data-text-id="${textId}"]`).classList.remove('hidden');
+  document.querySelector(`[data-text-id="${textId}"]`).classList.remove('mask');
 }
 
 function clickOnDot() {
@@ -41,7 +41,7 @@ function autoPlay(counter) {
     if (counter === 4) {
       counter = 1;
     }
-  }, 1000)
+  }, 8000)
 }
 
 function carouselAtelier(counter) {
