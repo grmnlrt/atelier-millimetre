@@ -77,7 +77,9 @@ function triggerClickOnProduct() {
 
 function fetchUrlId() {
   if (window.location.hash !== "") {
-    document.querySelector(`[data-product-id="${window.location.hash.substr(1)}`).click();
+    setTimeout(() => {
+      document.querySelector(`[data-product-id="${window.location.hash.substr(1)}`).click();
+    }, 500)
   }
 }
 
