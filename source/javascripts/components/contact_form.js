@@ -1,5 +1,5 @@
 function contactForm() {
-  const openModals = document.querySelectorAll('#navbar li.contact-trigger');
+  const openModals = document.querySelectorAll('.contact-trigger');
   const contactBox = document.querySelector('#contact-box');
   // const contactForm = contactBox.querySelector('#contact-form');
   const overlay = document.querySelector('.overlay');
