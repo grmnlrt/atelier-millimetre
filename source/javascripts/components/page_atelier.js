@@ -1,5 +1,5 @@
 function updateDot(dotId) {
-  const dots = document.querySelectorAll('#dots .dot');
+  const dots = document.querySelectorAll('.dots .dot');
   dots.forEach((dot) => {
     dot.classList.add('empty');
   })
@@ -46,7 +46,7 @@ function autoPlay(counter) {
 
 function carouselAtelier(counter) {
   const auto = autoPlay(counter);
-  const dots = document.querySelectorAll('#dots .dot');
+  const dots = document.querySelectorAll('.dots .dot');
   dots.forEach((dot) => {
     dot.addEventListener('click', (event) => {
       clickOnDot().then((data) => {
