@@ -8,7 +8,7 @@ import carouselAtelier from './components/page_atelier';
 
 mobileMenu();
 contactForm();
-changeBannerPicture();
+changeBannerPicture(2);
 carouselAtelier(2);
 
 
