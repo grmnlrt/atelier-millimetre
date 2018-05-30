@@ -37,13 +37,11 @@ function autoPlay(counter) {
 function changeBannerPicture(counter) {
   const auto = autoPlay(counter);
   const dots = document.querySelectorAll('.dot-lg');
-  console.log(dots);
   dots.forEach((dot) => {
     dot.addEventListener('click', (event) => {
       clickOnDot().then((data) => {
         window.clearInterval(auto);
         if (data === 4) {
-          console.log('reset data');
           changeBannerPicture(1);
         } else {
           changeBannerPicture(data + 1);
