@@ -1,6 +1,20 @@
 .homepage-carousel {
   position: absolute;
-  right: 20px;
-  top: 200px;
+  right: 30px;
+  bottom: 30px;
   display: flex;
+}
+
+.dot-lg {
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin: 0 2px;
+  &:hover {
+    background-color: $green;
+  }
+  &.active {
+    background-color: $green;
+  }
 }

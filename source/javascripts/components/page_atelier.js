@@ -24,7 +24,7 @@ function updateText(textId) {
 
 function clickOnDot() {
   return new Promise((resolve) => {
-    const position = parseInt(event.target.dataset.dotId)
+    const position = parseInt(event.target.dataset.dotId);
     updateImage(position);
     updateDot(position);
     updateText(position);

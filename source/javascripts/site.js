@@ -8,8 +8,14 @@ import carouselAtelier from './components/page_atelier';
 
 mobileMenu();
 contactForm();
-changeBannerPicture();
-carouselAtelier(2);
+
+if (document.querySelector(".home-content")) {
+  changeBannerPicture(2);
+}
+
+if (document.querySelector("#atelier-pictures")) {
+  carouselAtelier(2);
+}
 
 
 if (document.querySelector("#product-carousel")) {
