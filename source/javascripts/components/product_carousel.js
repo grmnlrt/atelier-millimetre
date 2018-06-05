@@ -12,7 +12,21 @@ function createDescriptionParagraphs(description) {
   return paragraphs.join('');
 }
 
+function CompareForSort(first, second)
+{
+  if (first.data.position == second.data.position) {
+    return 0;
+  }
+  if (first.data.position < second.data.position) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
+
 function populateCarousel(products) {
+  const sortedProducts = products.sort(CompareForSort)
+  console.log(sortedProducts, products)
   return new Promise((resolve) => {
     const container = document.querySelector(".product-container");
     const detailsContainer = document.querySelector('#product-details');
