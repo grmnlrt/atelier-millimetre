@@ -26,12 +26,11 @@ function CompareForSort(first, second)
 
 function populateCarousel(products) {
   const sortedProducts = products.sort(CompareForSort)
-  console.log(sortedProducts, products)
   return new Promise((resolve) => {
     const container = document.querySelector(".product-container");
     const detailsContainer = document.querySelector('#product-details');
 
-    products.forEach((product) => {
+    sortedProducts.forEach((product) => {
 
       const productPicture = `
         <div class="product-picture" data-product-id="${product.id}">
