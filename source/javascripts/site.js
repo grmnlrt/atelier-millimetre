@@ -5,6 +5,7 @@ import { populateCarousel, triggerClickOnProduct, fetchUrlId } from './component
 import { getData } from './services/prismic_api';
 import { hideLoader } from './components/loader';
 import carouselAtelier from './components/page_atelier';
+import populateEditions from './components/page_editions';
 
 mobileMenu();
 contactForm();
@@ -24,6 +25,14 @@ if (document.querySelector("#product-carousel")) {
       hideLoader();
       triggerClickOnProduct();
       fetchUrlId();
+    });
+  });
+}
+
+if (document.querySelector('#container-editions')) {
+  getData().then(results => {
+    populateEditions(results).then(() => {
+      hideLoader();
     });
   });
 }
