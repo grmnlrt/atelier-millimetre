@@ -7,6 +7,7 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Atelier Millimètre : Spécialiste de petites choses" %></title>
     <%= stylesheet_link_tag "site" %>
+    <%= favicon_tag 'images/favicon.png' %>
   </head>
   <body>
     <%= partial "components/navbar" %>
