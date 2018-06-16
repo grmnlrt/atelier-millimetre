@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Atelier Millimètre : Spécialiste de petites choses" %></title>
+    <meta name="description" content="<%= current_page.data.description || 'L’atelier millimètre coud des carnets, construit des cadres, bricole des livres et invente des trucs. Relieuse de formation, Maël la créatrice, mêle à son imagination un savoir-faire pointu. Ici, on s’applique pour faire de chacun de nos objets une création authentique.' %>" />
     <%= stylesheet_link_tag "site" %>
     <%= favicon_tag 'images/favicon.png' %>
   </head>
