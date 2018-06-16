@@ -27,13 +27,13 @@ title: Atelier Millimètre - Spécialiste de petites choses
           <div class="cards">
             <div class="row">
               <div class="col-xs-12 col-md-4">
-                <div class="card-body">
+                <div id="instagram" class="card-body">
                   <%= partial 'components/card_home',
                     locals: {
                       title: 'instagram',
-                      image: 'millimetre.jpg',
+                      image: '',
                       link: 'https://www.instagram.com/atelier.millimetre/',
-                      target_blank: true,
+                      instagram: true,
                       description: 'Retrouvez toutes les photos de l’atelier sur notre compte Instagram.'
                     }
                   %>
@@ -53,7 +53,7 @@ title: Atelier Millimètre - Spécialiste de petites choses
                       title: 'les cadres',
                       image: 'more_frames.jpg',
                       link: '/les_cadres.html',
-                      target_blank: false,
+                      instagram: false,
                       description: "Découvrez les cadres fabriqués main de l'atelier millimètre."
                     }
                   %>
@@ -64,7 +64,7 @@ title: Atelier Millimètre - Spécialiste de petites choses
                       title: 'les carnets',
                       image: 'notebook.jpg',
                       link: '/les_carnets.html',
-                      target_blank: false,
+                      instagram: false,
                       description: "Des carnets confectionnés avec soin dans l'atelier millimètre."
                     }
                   %>
@@ -75,7 +75,7 @@ title: Atelier Millimètre - Spécialiste de petites choses
                       title: 'les éditions',
                       image: 'millimetre.jpg',
                       link: 'les_editions.html',
-                      target_blank: false,
+                      instagram: false,
                       description: "Découvrez les éditions minuscules, des livres fabriqués avec attention et impertinence."
                     }
                   %>

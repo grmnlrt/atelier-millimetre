@@ -6,7 +6,9 @@ import { getData } from './services/prismic_api';
 import { hideLoader } from './components/loader';
 import carouselAtelier from './components/page_atelier';
 import populateEditions from './components/page_editions';
+import getLastInstagramPost from './services/instagram';
 
+getLastInstagramPost();
 mobileMenu();
 contactForm();
 
