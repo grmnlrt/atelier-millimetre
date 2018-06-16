@@ -1,0 +1,24 @@
+<h2><%= title %></h2>
+<div class="card_picture" style="background-image: url(<%= image_path image %>)">
+  <% if target_blank %>
+    <% link_to link, target: :_blank do %>
+      <div class="card-hover">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4><%= description %></h4>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <% link_to link do %>
+      <div class="card-hover">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4><%= description %></h4>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
