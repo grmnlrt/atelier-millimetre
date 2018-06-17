@@ -6,6 +6,7 @@ import { getData } from './services/prismic_api';
 import { hideLoader } from './components/loader';
 import carouselAtelier from './components/page_atelier';
 import populateEditions from './components/page_editions';
+import populatePointsVente from './components/page_points_de_vente';
 
 mobileMenu();
 contactForm();
@@ -34,5 +35,11 @@ if (document.querySelector('#container-editions')) {
     populateEditions(results).then(() => {
       hideLoader();
     });
+  });
+}
+
+if (document.querySelector("#salons_boutiques")) {
+  getData().then(results => {
+    populatePointsVente(results);
   });
 }
