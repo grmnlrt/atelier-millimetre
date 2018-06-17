@@ -6,10 +6,12 @@ import { getData } from './services/prismic_api';
 import { hideLoader } from './components/loader';
 import carouselAtelier from './components/page_atelier';
 import populateEditions from './components/page_editions';
+import sendMail from './services/formspree';
 import populatePointsVente from './components/page_points_de_vente';
 
 mobileMenu();
 contactForm();
+sendMail();
 
 if (document.querySelector(".home-content")) {
   changeBannerPicture(2);
