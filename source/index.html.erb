@@ -27,14 +27,58 @@ title: Atelier Millimètre - Spécialiste de petites choses
           <div class="cards">
             <div class="row">
               <div class="col-xs-12 col-md-4">
-                <div class="card-body">
-                  <%= partial 'components/card_instagram' %>
+                <div id="instagram" class="card-body">
+                  <%= partial 'components/card_home',
+                    locals: {
+                      title: 'instagram',
+                      image: '',
+                      link: 'https://www.instagram.com/atelier.millimetre/',
+                      instagram: true,
+                      description: 'Retrouvez toutes les photos de l’atelier sur notre compte Instagram.'
+                    }
+                  %>
                 </div>
               </div>
               <div class="col-xs-12 col-md-8">
                 <div class="card-body">
                   <%= partial 'components/card_eshop' %>
                 </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-4 col-xs-12">
+                  <%= partial 'components/card_home',
+                    locals: {
+                      title: 'les cadres',
+                      image: 'more_frames.jpg',
+                      link: '/les_cadres.html',
+                      instagram: false,
+                      description: "Découvrez les cadres fabriqués main de l'atelier millimètre."
+                    }
+                  %>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                  <%= partial 'components/card_home',
+                    locals: {
+                      title: 'les carnets',
+                      image: 'notebook.jpg',
+                      link: '/les_carnets.html',
+                      instagram: false,
+                      description: "Des carnets confectionnés avec soin dans l'atelier millimètre."
+                    }
+                  %>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                  <%= partial 'components/card_home',
+                    locals: {
+                      title: 'les éditions',
+                      image: 'millimetre.jpg',
+                      link: 'les_editions.html',
+                      instagram: false,
+                      description: "Découvrez les éditions minuscules, des livres fabriqués avec attention et impertinence."
+                    }
+                  %>
               </div>
             </div>
           </div>
