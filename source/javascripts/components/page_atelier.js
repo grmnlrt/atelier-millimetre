@@ -38,7 +38,7 @@ function autoPlay(counter) {
     updateDot(counter);
     updateText(counter);
     counter += 1;
-    if (counter === 4) {
+    if (counter === 5) {
       counter = 1;
     }
   }, 8000)
