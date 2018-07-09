@@ -5,6 +5,18 @@
   position: relative;
   margin-bottom: 65px;
   transition: all .5s ease;
+
+  & > a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &.mask {
+    opacity: 0;
+  }
 }
 
 .banner-title {
