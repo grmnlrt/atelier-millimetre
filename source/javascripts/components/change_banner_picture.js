@@ -11,31 +11,40 @@ function updateImage(pictureId) {
   const picture = document.querySelector(`.dot-lg[data-pic='${pictureId}']`);
   const pictureName = picture.dataset['image'];
   picture.classList.add('active');
-  banner.style.backgroundImage = `url('/images/${pictureName}')`;
+  banner.style.backgroundImage = `url('${pictureName}')`;
+}
+
+function updateLink(pictureId) {
+  const banner = document.querySelector('.banner');
+  const picture = document.querySelector(`.dot-lg[data-pic='${pictureId}']`);
+  const pictureLink = picture.dataset['link'];
+  banner.querySelector('a').href = pictureLink;
 }
 
 function clickOnDot() {
   return new Promise((resolve) => {
     const position = parseInt(event.target.dataset.pic);
+    updateLink(position);
     updateImage(position);
     updateDot(position);
     resolve(position);
   });
 }
 
-function autoPlay(counter) {
+function autoPlay(counter, numberOfImages) {
   return window.setInterval(() => {
+    updateLink(counter);
     updateImage(counter);
     updateDot(counter);
     counter += 1;
-    if (counter === 5) {
+    if (counter === numberOfImages) {
       counter = 1;
     }
-  }, 4000)
+  }, 4000);
 }
 
-function changeBannerPicture(counter) {
-  const auto = autoPlay(counter);
+function changeBannerPicture(counter, numberOfImages) {
+  const auto = autoPlay(counter, numberOfImages);
   const dots = document.querySelectorAll('.dot-lg');
   dots.forEach((dot) => {
     dot.addEventListener('click', (event) => {
@@ -51,4 +60,47 @@ function changeBannerPicture(counter) {
   });
 }
 
-export { changeBannerPicture };
+// For Prismic connection
+
+function setFirstPicture(picture) {
+  const banner = document.querySelector('.banner');
+  banner.style.backgroundImage = `url("${picture.image.url}")`;
+  banner.querySelector('h1').innerText = picture.title;
+  banner.querySelector('a').href= picture.link.url;
+}
+
+function addDots(pictures) {
+  const banner = document.querySelector('.banner .homepage-carousel');
+  let counter = 1;
+
+  pictures.forEach((picture) => {
+    let active = "";
+    let link = "#"
+    if (counter === 1) {
+      active = " active";
+    }
+    if (picture.link.url !== undefined) {
+      link = picture.link.url;
+    }
+    const dot = `<div data-pic="${counter}" data-image="${picture.image.url}" data-link="${link}" class="dot-lg picture${counter}${active}"></div>`;
+    banner.insertAdjacentHTML('beforeend', dot)
+    counter += 1;
+  })
+}
+
+function populateBanner(pictures) {
+  return new Promise((resolve) => {
+    setFirstPicture(pictures[0]);
+    addDots(pictures);
+    resolve(pictures.length);
+  });
+}
+
+function showBanner() {
+  return window.setInterval(() => {
+    const banner = document.querySelector('.banner');
+    banner.classList.remove('mask');
+  }, 500);
+}
+
+export { changeBannerPicture, populateBanner, showBanner };
