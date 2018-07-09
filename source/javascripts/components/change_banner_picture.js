@@ -17,13 +17,21 @@ function updateImage(pictureId) {
 function updateLink(pictureId) {
   const banner = document.querySelector('.banner');
   const picture = document.querySelector(`.dot-lg[data-pic='${pictureId}']`);
-  const pictureLink = picture.dataset['link'];
-  banner.querySelector('a').href = pictureLink;
+  const link = picture.dataset['link'];
+  banner.querySelector('a').href = link;
+}
+
+function updateTitle(pictureId) {
+  const banner = document.querySelector('.banner');
+  const picture = document.querySelector(`.dot-lg[data-pic='${pictureId}']`);
+  const title = picture.dataset['title'];
+  banner.querySelector('h1').innerText = title;
 }
 
 function clickOnDot() {
   return new Promise((resolve) => {
     const position = parseInt(event.target.dataset.pic);
+    updateTitle(position);
     updateLink(position);
     updateImage(position);
     updateDot(position);
@@ -33,6 +41,7 @@ function clickOnDot() {
 
 function autoPlay(counter, numberOfImages) {
   return window.setInterval(() => {
+    updateTitle(counter);
     updateLink(counter);
     updateImage(counter);
     updateDot(counter);
@@ -76,13 +85,17 @@ function addDots(pictures) {
   pictures.forEach((picture) => {
     let active = "";
     let link = "#"
+    let title = ""
     if (counter === 1) {
       active = " active";
     }
     if (picture.link.url !== undefined) {
       link = picture.link.url;
     }
-    const dot = `<div data-pic="${counter}" data-image="${picture.image.url}" data-link="${link}" class="dot-lg picture${counter}${active}"></div>`;
+    if (picture.title !== null) {
+      title = picture.title;
+    }
+    const dot = `<div data-pic="${counter}" data-image="${picture.image.url}" data-title="${title}" data-link="${title}" class="dot-lg picture${counter}${active}"></div>`;
     banner.insertAdjacentHTML('beforeend', dot)
     counter += 1;
   })
