@@ -22,27 +22,6 @@ title: Atelier Millimètre - Spécialiste de petites choses
           </div>
           <div class="cards">
             <div class="row">
-              <div class="col-xs-12 col-md-4">
-                <div id="instagram" class="card-body">
-                  <%= partial 'components/card_home',
-                    locals: {
-                      title: 'instagram',
-                      image: '',
-                      link: 'https://www.instagram.com/atelier.millimetre/',
-                      instagram: true,
-                      description: 'Retrouvez toutes les photos de l’atelier sur notre compte Instagram.'
-                    }
-                  %>
-                </div>
-              </div>
-              <div class="col-xs-12 col-md-8">
-                <div class="card-body">
-                  <%= partial 'components/card_eshop' %>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="row">
               <div class="col-md-4 col-xs-12">
                   <%= partial 'components/card_home',
                     locals: {
@@ -75,6 +54,27 @@ title: Atelier Millimètre - Spécialiste de petites choses
                       description: "Découvrez les éditions minuscules, des livres fabriqués avec attention et impertinence."
                     }
                   %>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-12 col-md-4">
+                <div id="instagram" class="card-body">
+                  <%= partial 'components/card_home',
+                    locals: {
+                      title: 'instagram',
+                      image: '',
+                      link: 'https://www.instagram.com/atelier.millimetre/',
+                      instagram: true,
+                      description: 'Retrouvez toutes les photos de l’atelier sur notre compte Instagram.'
+                    }
+                  %>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-8">
+                <div class="card-body">
+                  <%= partial 'components/card_eshop' %>
+                </div>
               </div>
             </div>
           </div>
