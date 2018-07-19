@@ -41,7 +41,7 @@ input, textarea {
 }
 
 .btn-secondary {
-  border: 2px solid #D0DA8E;
+  border: 2px solid $green;
   background-color: transparent;
   color: $black;
   &:hover {
@@ -50,11 +50,11 @@ input, textarea {
 }
 
 .btn-eshop {
-  border: 2px solid #D0DA8E;
+  border: 2px solid $green;
   background-color: white;
-  color: #333333;
+  color: $black;
   &:hover {
-    color: #333333;
+    color: $black;
   }
 }
 
