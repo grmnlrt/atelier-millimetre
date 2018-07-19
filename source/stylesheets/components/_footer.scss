@@ -1,6 +1,18 @@
 #footer {
   border-top: 1px solid $green;
   margin-top: 80px;
+  .logo-footer {
+    padding: 15px;
+
+    p {
+      font-size: .9em;
+    }
+
+    img {
+      max-width: 150px;
+      margin-bottom: 16px;
+    }
+  }
 }
 .footer-frame {
   height: 200px;

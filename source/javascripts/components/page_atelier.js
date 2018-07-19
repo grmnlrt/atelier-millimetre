@@ -38,7 +38,7 @@ function autoPlay(counter) {
     updateDot(counter);
     updateText(counter);
     counter += 1;
-    if (counter === 5) {
+    if (counter === 6) {
       counter = 1;
     }
   }, 8000)
@@ -51,7 +51,7 @@ function carouselAtelier(counter) {
     dot.addEventListener('click', (event) => {
       clickOnDot().then((data) => {
         window.clearInterval(auto);
-        if (data === 3) {
+        if (data === 5) {
           carouselAtelier(1);
         } else {
           carouselAtelier(data + 1);
