@@ -13,7 +13,7 @@ import populatePointsVente from './components/page_points_de_vente';
 getLastInstagramPost();
 mobileMenu();
 contactForm();
-// sendMail();
+sendMail();
 
 if (document.querySelector("#atelier-pictures")) {
   carouselAtelier(2);
