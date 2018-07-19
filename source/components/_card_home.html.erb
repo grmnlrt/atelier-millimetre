@@ -1,10 +1,10 @@
-<h2><%= title %></h2>
 <div class="card_picture" style="background-image: url(<%= image_path image %>)">
   <% if instagram %>
     <% link_to link, target: :_blank do %>
       <div class="card-hover">
         <div class="row">
           <div class="col-xs-12">
+            <h2><%= title.upcase %></h2>
             <h4><%= description %></h4>
           </div>
         </div>
@@ -15,6 +15,7 @@
       <div class="card-hover">
         <div class="row">
           <div class="col-xs-12">
+            <h2><%= title.upcase %></h2>
             <h4><%= description %></h4>
           </div>
         </div>

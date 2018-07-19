@@ -25,7 +25,10 @@ function updateTitle(pictureId) {
   const banner = document.querySelector('.banner');
   const picture = document.querySelector(`.dot-lg[data-pic='${pictureId}']`);
   const title = picture.dataset['title'];
-  banner.querySelector('h1').innerText = title;
+  if (title.length > 0) {
+    banner.querySelector('h1').innerText = title;
+    banner.querySelector('h1').classList.remove('hidden');
+  }
 }
 
 function clickOnDot() {
@@ -45,21 +48,23 @@ function autoPlay(counter, numberOfImages) {
     updateLink(counter);
     updateImage(counter);
     updateDot(counter);
-    counter += 1;
     if (counter === numberOfImages) {
       counter = 1;
+    } else {
+      counter += 1;
     }
   }, 4000);
 }
 
-function changeBannerPicture(counter, numberOfImages) {
-  const auto = autoPlay(counter, numberOfImages);
+function changeBannerPicture(counter) {
   const dots = document.querySelectorAll('.dot-lg');
+  const numberOfImages = dots.length;
+  const auto = autoPlay(counter, numberOfImages);
   dots.forEach((dot) => {
     dot.addEventListener('click', (event) => {
       clickOnDot().then((data) => {
         window.clearInterval(auto);
-        if (data === 4) {
+        if (data === numberOfImages) {
           changeBannerPicture(1);
         } else {
           changeBannerPicture(data + 1);

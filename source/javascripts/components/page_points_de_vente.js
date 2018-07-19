@@ -1,7 +1,7 @@
 function populateSalon(container, salons) {
   if (salons.length !== 0) {
     container.insertAdjacentHTML('beforeend', `<div class="row"><div class="col-xs-offset-2 col-xs-8 salons"><h2 class="uppercase">Salons</h2></div></div>`);
-    salons.forEach((salon) => {
+    salons.reverse().forEach((salon) => {
       let content;
       if (salon.salon_link.url) {
         content = `<p><a target="_blank" href="${salon.salon_link.url}">${salon.salon_name}</a></p>`

@@ -52,6 +52,8 @@ function populateCarousel(products) {
               <ul class="mm-list materials">${createMaterialsList(product.data.materiaux)}</ul>
             <h3>Format</h3>
             <p>${product.data.format}</p>
+            <h3>Temps de réalisation</h3>
+            <p>${product.data.time}</p>
           </div>
         </div>
       `;

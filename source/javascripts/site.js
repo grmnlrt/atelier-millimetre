@@ -47,7 +47,7 @@ if (document.querySelector("#salons_boutiques")) {
 if (document.getElementById('homepage')) {
   fetchCarouselImages().then(results => {
     populateBanner(results).then(number => {
-      changeBannerPicture(2, number);
+      changeBannerPicture(2);
       showBanner();
     })
   });
