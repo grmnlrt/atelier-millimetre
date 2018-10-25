@@ -1,7 +1,7 @@
 # Atelier Millimètre
 
 ## French workshop that sells organic handmade products
-[www.mm-millimetre.fr/](http://www.mm-millimetre.fr/)
+[www.mm-millimetre.fr](http://www.mm-millimetre.fr/)
 
 ### Preview
 
