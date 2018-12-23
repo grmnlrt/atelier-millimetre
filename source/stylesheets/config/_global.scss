@@ -47,6 +47,16 @@ input, textarea {
   &:hover {
     background-color: $light-grey;
   }
+
+  &.s-black {
+    background-color: $black;
+    color: $green;
+    border-width: 0;
+
+    &:hover {
+      background-color: #4f4f4f;
+    }
+  }
 }
 
 .btn-eshop {
