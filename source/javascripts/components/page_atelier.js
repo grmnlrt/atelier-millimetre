@@ -41,7 +41,7 @@ function autoPlay(counter) {
     if (counter === 6) {
       counter = 1;
     }
-  }, 8000)
+  }, 12000)
 }
 
 function carouselAtelier(counter) {
