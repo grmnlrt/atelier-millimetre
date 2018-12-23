@@ -30,10 +30,11 @@ function populateCarousel(products) {
     const container = document.querySelector(".product-container");
     const detailsContainer = document.querySelector('#product-details');
 
+    let index = 0;
     sortedProducts.forEach((product) => {
 
       const productPicture = `
-        <div class="product-picture" data-product-id="${product.id}">
+        <div class="product-picture ${index === 0 ? "" : "unselected" }" data-product-id="${product.id}">
           <img src="${product.data.image.url}" alt="${product.data.title[0].text}">
         </div>
       `;
@@ -41,7 +42,7 @@ function populateCarousel(products) {
       const productLink = `<a class="btn btn-primary" href="${product.data.shop_link.url}" target="_blank">Acheter en ligne</a>`;
 
       const productDetails = `
-        <div class="row details product-hidden" data-product-target="${product.id}">
+        <div class="row details ${index === 0 ? "" : "product-hidden" }" data-product-target="${product.id}">
           <div class="col-xs-12 col-sm-7">
             <h2>${product.data.title[0].text}</h2>
             <div class="description">${createDescriptionParagraphs(product.data.description)}</div>
@@ -60,6 +61,7 @@ function populateCarousel(products) {
 
       container.insertAdjacentHTML('beforeend', productPicture);
       resolve(detailsContainer.insertAdjacentHTML('beforeend', productDetails));
+      index += 1;
     })
   });
 }
